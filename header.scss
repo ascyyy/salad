@@ -1,0 +1,295 @@
+ /* PC style */
+@media screen and (min-width: 769px) {
+.l-wrap{
+    background-color: #f9f8f3;
+    width: 100%;
+    height: 100%;
+}
+.l-header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+
+    &__top{
+        background: #f9f8f3;
+        &Box{
+            margin-left: auto;
+            margin-top: 18px;
+            & p{
+                font-weight: bold;
+                border-radius: 60px;
+                align-items: center;
+                width: 9rem;
+                color: white;
+                padding: 0.6rem;
+                background-color: #3f665c;
+                border-radius: 3rem;
+                text-align: center;
+                font-size: 14px;
+                font-family: "arial black";
+            }
+        }
+        &Group{
+            display: flex;
+            width: 97%;
+            margin: auto;
+        }
+    }
+    &__logo{
+        width: 50px;
+        height: 50px;
+        margin: 9px;
+    }
+    &__list{
+        position: relative;
+        display: flex;
+        color: #0c3b2c;
+    }
+    &__listTXT{
+        font-family: 'arial black';
+        font-size: 10px;
+        padding: 28px 8px ;
+        &:hover{
+            color: rgb(202, 159, 79);
+        }
+    }
+    &__groupBox{
+        padding: 16px;
+        margin: 11px 0;
+        margin-left: auto;
+        border-radius: 26px;
+        color: #2c2c2f;
+        background: #0c3b2c;
+        text-align: center;
+        & p {
+            font-family: 'arial black';
+            font-size: 5px;
+            margin: 0;
+            padding: 0;
+            color: #f9f8f3;
+            }
+        }
+
+}
+.l-nav__list{
+    display: none;
+}
+.nav{
+    display: none;
+}
+.accordion{
+    display: none;
+}
+.l-header__groupMiddle{
+    display: none;
+}
+}
+
+
+
+ /* SP style */
+@media screen and (max-width: 768px) {
+
+    .l-wrap{
+        background-color: #f9f8f3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .l-header{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        &__top{
+            width: 100%;
+            // display: flex;
+            flex-wrap: column;
+            background: #f9f8f3;
+            &Group{
+                display: flex;
+                width: 90%;
+                margin: auto;
+            }
+            &Box{
+                padding: 5% 0px 0px 27%;
+                color: #0c3b2c;
+                font-family: 'arial black';
+            }
+        }
+        &__logo{
+            width: 80px;
+            height: 80px;
+            padding: 16px;
+            margin-left: 43%;
+        }
+        &__list{
+            display: none;
+        }
+    }
+
+
+    // レスポンシブハンバーガーメニュー
+    #g-nav{
+        order: 2;
+        position:fixed;
+        z-index: -1;
+        opacity: 0;
+        /*ナビの位置と形状*/
+        top:0;
+        width:100%;
+        height: 100vh;
+        background:#0c3b2c;
+        transition: all 0.4s;
+
+        &.panelactive{
+            opacity: 1;
+            z-index:999;
+            & #g-nav-list{
+                /*ナビの数が増えた場合縦スクロール*/
+                // position: fixed;
+                z-index: 999;
+                width: 100%;
+                height: 100vh;/*表示する高さ*/
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        & ul {
+        display: none;
+        z-index: 999;
+        margin: 25% 0px 0px 10%;
+        }
+        & ul {
+            display: block;
+        }
+    }
+
+
+    .l-nav{
+        &__list{
+            & li{
+                font-size: 40px;
+                padding: 1.3rem 0;
+                color: white;
+                font-family: 'arial black';
+                &:hover{
+                    color: rgb(202, 159, 79);;
+                }
+            }
+        }
+        &__groupBox{
+            padding-top: 8%;
+            p {
+                width: 60%;
+                font-weight: bold;
+                border-radius: 60px;
+                align-items: center;
+                width: 30rem;
+                margin: 0 auto;
+                padding: 2.5rem;
+                background-color: #3f665c;
+                border-radius: 3rem;
+                text-align: center;
+                color: white;
+
+                font-size: 20px;
+                font-family: 'arial black';
+            }
+            }
+    }
+    hr{
+        size: 0.5px;
+        &:not(first-child){
+            margin-right: 10%;
+            margin-top: 7%;
+            width: 90%;
+        }
+    }
+    .l-header__group{
+        margin: 5% 0px 0px 10%;
+        & li{
+            padding-top: 7%;
+            font-family: 'arial black';
+            list-style: none;
+        }
+        &Middle{
+            margin: 5% 0px 0px 10%;
+            display: flex;
+            & li{
+                color: #3f665c;
+                padding-right: 10%;
+                list-style: none;
+                font-family: 'arial black';
+            }
+        }
+
+        &Bottom{
+            color: white;
+            font-family: 'arial black';
+            font-size: 40px;
+            text-align: center;
+            margin: 20% 0px;
+        }
+
+    }
+
+
+
+     // ボタン
+        .openbtn1{
+        position:fixed;
+        z-index: 9999;/*ボタンを最前面に*/
+        top: 18px;
+        left: 73px;
+        cursor: pointer;
+        width: 100px;
+        height:100px;
+            & span{
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            width: 45%;
+        }
+    }
+
+
+
+
+
+    /*========= ボタンのためのCSS ===============*/
+
+    .openbtn1 span:nth-of-type(1) {
+        top:15px;
+    }
+
+    .openbtn1 span:nth-of-type(2) {
+        top:23px;
+    }
+
+    .openbtn1 span:nth-of-type(3) {
+        top:31px;
+    }
+
+    .openbtn1.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn1.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn1.active span:nth-of-type(3){
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+
+}

@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* PC style */
+@media screen and (min-width: 769px) {
+  .l-footer {
+    position: relative;
+    margin-top: 5%;
+    background-color: #eae8e3;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+  }
+  .l-footer__wrap {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-footer__contents {
+    position: relative;
+    margin-top: 5%;
+    background-color: #eae8e3;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+  }
+  .l-footer__top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .l-footer__topImg {
+    overflow: hidden;
+  }
+  .l-footer__top img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+    transform: scale(1.1);
+  }
+  .l-footer__top img:hover {
+    transform: scale(1);
+  }
+  .l-footer__middle {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-color: #0c3b2c;
+  }
+  .l-footer__middleTop {
+    display: flex;
+    width: 47%;
+    margin-left: 22%;
+  }
+  .l-footer__middleLeft {
+    padding-top: 15%;
+  }
+  .l-footer__middleRight {
+    padding-top: 15%;
+  }
+  .l-footer__middle h6 {
+    color: white;
+    font-size: 19px;
+    font-family: "arial black";
+  }
+  .l-footer__middle p {
+    width: 87%;
+    padding-top: 40px;
+    color: white;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.07rem;
+  }
+  .l-footer__middleImg {
+    position: absolute;
+    top: -3%;
+    left: 68%;
+  }
+  .l-footer__middleImg img {
+    width: 45%;
+  }
+  .l-footer__middle hr {
+    margin-top: 15%;
+  }
+  .l-footer__middleGroup {
+    width: 55%;
+    display: flex;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .l-footer__middleGroup ul {
+    color: white;
+    font-family: "arial black";
+  }
+  .l-footer__middleGroup li {
+    padding-top: 20px;
+    color: rgb(134, 164, 140);
+    font-size: 12px;
+    line-height: 2;
+    transition: all 1s ease;
+  }
+  .l-footer__middleGroup li:hover {
+    color: rgb(255, 255, 255);
+  }
+  .l-footer__middleList {
+    width: 200px;
+    padding-right: 5px;
+  }
+  .l-footer__middleIcon {
+    display: flex;
+    padding-right: 10px;
+  }
+  .l-footer__middleIcon img {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    color: white;
+  }
+  .l-footer__middleIcon2 {
+    display: none;
+  }
+  .l-footer__bottom {
+    position: absolute;
+    bottom: 0; /*下寄せの指定*/
+    font-size: 157px;
+    font-family: "Trebuchet MS";
+    color: white;
+    white-space: nowrap;
+  }
+  .l-footer__bottomBox {
+    display: none;
+  }
+}
+/* SP style */
+@media screen and (max-width: 768px) {
+  .l-footer {
+    position: relative;
+    background-color: #eae8e3;
+    width: 100%;
+    height: 550px;
+    margin-top: 10%;
+  }
+  .l-footer__wrap {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-footer__top {
+    position: absolute;
+    top: 15%;
+  }
+  .l-footer__topImg {
+    overflow: hidden;
+  }
+  .l-footer__top img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+    transform: scale(1.1);
+  }
+  .l-footer__top img:hover {
+    transform: scale(1);
+  }
+  .l-footer__contents {
+    background-color: #eae8e3;
+    width: 100%;
+    height: 550px;
+  }
+  .l-footer__middle {
+    position: relative;
+    width: 100%;
+    background-color: #0c3b2c;
+  }
+  .l-footer__middleTop {
+    padding-top: 20%;
+    padding-left: 10%;
+  }
+  .l-footer__middleImg {
+    position: absolute;
+    top: 21%;
+    left: 59%;
+  }
+  .l-footer__middleImg img {
+    width: 40%;
+  }
+  .l-footer__middleLeft h6 {
+    width: 75%;
+    font-size: 40px;
+    color: white;
+    font-family: "arial black";
+  }
+  .l-footer__middleLeft p {
+    width: 87%;
+    padding-top: 25px;
+    font-size: 20px;
+    color: white;
+    line-height: 2;
+    letter-spacing: 0.07rem;
+  }
+  .l-footer__middleRight {
+    margin-top: 10%;
+  }
+  .l-footer__middleRight h6 {
+    width: 75%;
+    font-size: 40px;
+    color: white;
+    font-family: "arial black";
+  }
+  .l-footer__middleRight p {
+    width: 53%;
+    padding-top: 25px;
+    font-size: 20px;
+    color: white;
+    line-height: 2;
+    letter-spacing: 0.07rem;
+  }
+  .l-footer__middleList {
+    display: none;
+  }
+  .l-footer__middleIcon2 {
+    display: flex;
+    margin: 10% 0px 0px 10%;
+  }
+  .l-footer__middleIcon2 img {
+    margin-right: 38px;
+    width: 40px;
+    color: white;
+  }
+  .l-footer__middleIcon {
+    display: none;
+  }
+  .l-footer__bottom {
+    color: white;
+    font-family: "arial black";
+    font-size: 40px;
+    text-align: center;
+    padding: 20% 0px;
+  }
+  .l-footer__bottomBox {
+    padding-top: 25%;
+  }
+  .l-footer__bottomBox p {
+    color: white;
+    font-weight: bold;
+    border-radius: 60px;
+    align-items: center;
+    width: 35rem;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: #3f665c;
+    border-radius: 7rem;
+    text-align: center;
+    font-size: 33px;
+    font-family: "arial black";
+  }
+}
+.accordion {
+  width: 67%;
+  margin: auto;
+}
+
+.accordion-003 {
+  max-width: 500px;
+  margin-bottom: 7px;
+  border-bottom: 0.5px solid #d6dde3;
+}
+
+.accordion-003 summary {
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 2em 0em;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion-003 summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-003 summary::before,
+.accordion-003 summary::after {
+  width: 1px;
+  height: 0.9em;
+  border-radius: 5px;
+  background-color: #ffffff;
+  content: "";
+}
+
+.accordion-003 summary::before {
+  position: absolute;
+  right: 0em;
+  rotate: 90deg;
+}
+
+.accordion-003 summary::after {
+  transition: rotate 0.3s;
+}
+
+.accordion-003[open] summary::after {
+  rotate: 90deg;
+}
+
+.accordion-003 p {
+  font-size: 24px;
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: 0.3em 0em 1.5em;
+  color: #4e7e72;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: all 0.5s ease;
+}
+
+.accordion-003 p:hover {
+  color: white;
+}
+
+.accordion-003[open] p {
+  transform: none;
+  opacity: 1;
+}/*# sourceMappingURL=footer.css.map */
