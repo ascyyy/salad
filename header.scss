@@ -6,20 +6,21 @@
     height: 100%;
 }
 .l-header{
-    width: 97%;
-    margin: auto;
     &__top{
+        width: 100%;
         background: #f9f8f3;
+        position: fixed;
+        z-index: 999;
         &Box{
             margin-left: auto;
-            margin-top: 18px;
             & p{
+                margin: 8% 0px;
                 font-weight: bold;
                 border-radius: 60px;
                 align-items: center;
                 width: 8rem;
                 color: white;
-                padding: 0.8rem;
+                padding: 1.1rem;
                 background-color: #3f665c;
                 border-radius: 3rem;
                 text-align: center;
@@ -30,6 +31,9 @@
             display: flex;
             width: 97%;
             margin: auto;
+            & div{
+                display: flex;
+            }
         }
     }
     &__logo{

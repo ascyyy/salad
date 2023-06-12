@@ -120,7 +120,6 @@
   }
   .l-footer__bottom {
     width: 100%;
-    position: absolute;
     bottom: 0; /*下寄せの指定*/
     font-family: "Trebuchet MS";
     color: white;
