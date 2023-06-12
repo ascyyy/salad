@@ -25,14 +25,14 @@
     pause: 5000,
     slidesToShow: 4,
     speed: 600,
-    responsive: [
-      {
-        breakpoint: 768, // 768px以下のサイズに適用
-        settings: {
-          unslick
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 768, // 768px以下のサイズに適用
+    //     settings: {
+    //       unslick
+    //     },
+    //   },
+    // ],
   });
 
   // レスポンシブハンバーガーメニュー

@@ -6,10 +6,8 @@
     height: 100%;
 }
 .l-header{
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-
+    width: 97%;
+    margin: auto;
     &__top{
         background: #f9f8f3;
         &Box{
@@ -19,14 +17,13 @@
                 font-weight: bold;
                 border-radius: 60px;
                 align-items: center;
-                width: 9rem;
+                width: 8rem;
                 color: white;
-                padding: 0.6rem;
+                padding: 0.8rem;
                 background-color: #3f665c;
                 border-radius: 3rem;
                 text-align: center;
-                font-size: 14px;
-                font-family: "arial black";
+                font-size: 12px;
             }
         }
         &Group{
@@ -111,9 +108,7 @@
                 margin: auto;
             }
             &Box{
-                padding: 5% 0px 0px 27%;
-                color: #0c3b2c;
-                font-family: 'arial black';
+               display: none;
             }
         }
         &__logo{

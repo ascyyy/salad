@@ -84,10 +84,8 @@
   .l-footer__middleGroup {
     width: 55%;
     display: flex;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    padding-top: 10%;
   }
   .l-footer__middleGroup ul {
     color: white;
@@ -121,12 +119,16 @@
     display: none;
   }
   .l-footer__bottom {
+    width: 100%;
     position: absolute;
     bottom: 0; /*下寄せの指定*/
-    font-size: 157px;
     font-family: "Trebuchet MS";
     color: white;
     white-space: nowrap;
+  }
+  .l-footer__bottom div {
+    text-align: center;
+    font-size: 8.5rem;
   }
   .l-footer__bottomBox {
     display: none;
