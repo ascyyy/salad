@@ -7,20 +7,19 @@
         &__top{
             padding-top: 70px;
             background-color: #0c3b2c;
-        }
-        &__list{
-            width: 100%;
-            height: 49px;
-            background: #0c3b2c;
-            text-align: center;
-            // margin: 0 auto;
-            padding: 1rem;
-            &Txt{
-                font-size: 12px;
-                color: white;
+            & ul{
+                width: 100%;
+                height: 49px;
+                background: #0c3b2c;
                 text-align: center;
-            }
-            }
+                padding: 1rem;
+                & li{
+                    font-size: 12px;
+                    color: white;
+                    text-align: center;
+                }
+                }
+        }
 
         &__txt{
             display: flex;
@@ -76,33 +75,35 @@
                     width: 100px;
                     margin-bottom: 40px;
                 }
-            }
-            &Txt{
-                font-size: 50px;
-                color: white;
-                font-family:'arial black';
-                margin-bottom: 40px;
-            }
-            &Box p {
-                width: 60%;
-                padding: 20px 20px;
-                margin-left: auto;
-                margin-right: auto;
-                font-weight: bold;
-                border: solid 1px white;
-                border-radius: 60px;
+                & h3{
+                    font-size: 50px;
+                    color: white;
+                    font-family:'arial black';
+                    margin-bottom: 40px;
+                }
+                & div{
+                    p {
+                        width: 60%;
+                        padding: 20px 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-weight: bold;
+                        border: solid 1px white;
+                        border-radius: 60px;
 
-                font-size: 1px;
-                font-family: 'arial black';
-                color:white;
+                        font-size: 1px;
+                        font-family: 'arial black';
+                        color:white;
 
-                -webkit-transition: all 0.5s ease;
-                -moz-transition: all 0.5s ease;
-                -o-transition: all 0.5s ease;
-                transition: all 0.5s ease;
-                &:hover{
-                    background-color: white;
-                    color: #0c3b2c;
+                        -webkit-transition: all 0.5s ease;
+                        -moz-transition: all 0.5s ease;
+                        -o-transition: all 0.5s ease;
+                        transition: all 0.5s ease;
+                        &:hover{
+                            background-color: white;
+                            color: #0c3b2c;
+                        }
+                    }
                 }
             }
         }
@@ -180,45 +181,47 @@
             left: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
-        }
-        &Ttl{
-            font-size: 50px;
-            color: white;
-            font-family:'arial black';
-            margin-bottom: 40px;
-        }
-        &Txt{
-            width: 350px;
-            margin-bottom: 40px;
-            color: white;
-            font-size: 12px;
-            line-height: 2;
-            letter-spacing: .07rem;
-        }
+            & h5{
+                font-size: 50px;
+                color: white;
+                font-family:'arial black';
+                margin-bottom: 40px;
+                }
+            & p{
+                width: 350px;
+                margin-bottom: 40px;
+                color: white;
+                font-size: 12px;
+                line-height: 2;
+                letter-spacing: .07rem;
+            }
+            & div{
+                p {
+                    width: 60%;
+                    padding: 20px 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-weight: bold;
+                    border: solid 1px white;
+                    border-radius: 60px;
 
-        &Box p {
-            width: 60%;
-            padding: 20px 20px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: bold;
-            border: solid 1px white;
-            border-radius: 60px;
+                    font-size: 1px;
+                    font-family: 'arial black';
+                    color:white;
 
-            font-size: 1px;
-            font-family: 'arial black';
-            color:white;
-
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-            &:hover{
-                background-color: white;
-                color: #0c3b2c;
+                    -webkit-transition: all 0.5s ease;
+                    -moz-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                    &:hover{
+                        background-color: white;
+                        color: #0c3b2c;
+                    }
+                }
             }
         }
     }
+}
 
 }
 
@@ -269,10 +272,8 @@
             width: 100%;
             height: 350px;
             object-fit: cover;
-            // margin: 20px 0px 20px 20px;
-            // &:not(:first-child){
-            //     margin: 20px 0px 20px 20px;
-            // }
+            margin-left: 10px;
+            margin-right: 10px;
         }
     }
 }
@@ -314,7 +315,7 @@
                 font-family:'arial black';
                 color: #0c3b2c;
             }
-            &Txt{
+            & p{
                 width: 90%;
                 margin: 1rem 0px 1rem 0px;
                 color: #0c3b2c;
@@ -322,7 +323,7 @@
                 line-height: 2;
                 letter-spacing: .07rem;
             }
-            &Yen{
+            & div{
                 font-size: 15px;
                 font-family:'arial black';
                 color: #0c3b2c;
@@ -330,8 +331,8 @@
         }
         &__contents{
             & p{
-                width: 17rem;
-                padding: 2rem;
+                width: 11rem;
+                // padding: 1rem;
                 margin-top: 7%;
                 background-color: #3f665c;
                 border-radius: 4rem;
@@ -342,7 +343,7 @@
             }
         }
     }
-}
+
 
 
 
@@ -357,6 +358,40 @@
     .l-main{
         width: 90%;
         margin: auto;
+        &__top{
+            padding-top: 90px;
+            background-color: #0c3b2c;
+            & ul{
+                width: 100%;
+                height: 49px;
+                background: #0c3b2c;
+                text-align: center;
+                padding: 1rem;
+                & li{
+                    font-size: 12px;
+                    color: white;
+                    text-align: center;
+                }
+                }
+        }
+
+        &__txt{
+            display: flex;
+            margin-top: 15%;
+            & h1{
+                font-size: 64px;
+                width: 77%;
+                font-family: 'arial black';
+                color: #0c3b2c;
+                line-height: 1.3;
+            }
+            & p{
+                margin-left: auto;
+                font-family: 'arial black';
+                color: #0c3b2c;
+                padding-top: 19%;
+            }
+        }
 
 
         &__contents{
@@ -405,7 +440,7 @@
             width: 100%;
             &Img{
                 overflow: hidden;
-                height: 700px;
+                height: 580px;
                 & img{
                     width: 100%;
                     height: auto;
@@ -415,41 +450,41 @@
                 width: 100%;
                 height: 100vh;
             }
-        &Group{
-            white-space: nowrap;
-            position: absolute;
-            top: 32%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            & img{
-                width: 100px;
-                padding-bottom: 40px;
+            &Group{
+                white-space: nowrap;
+                position: absolute;
+                top: 41%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                & img{
+                    width: 100px;
+                    margin-bottom: 40px;
+                }
+                & h3{
+                    font-size: 50px;
+                    color: white;
+                    font-family:'arial black';
+                    margin-bottom: 40px;
+                }
+                & div{
+                    p {
+                        width: 40%;
+                        padding: 20px 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-weight: bold;
+                        border: solid 1px white;
+                        border-radius: 60px;
+
+                        font-size: 1px;
+                        font-family: 'arial black';
+                        color:white;
+
+                        }
+                    }
+                }
             }
-        }
-        &Txt{
-            font-size: 50px;
-            color: white;
-            font-family:'arial black';
-            margin-bottom: 40px;
-        }
-        &Box p {
-            width: 40%;
-            padding: 20px 20px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: bold;
-            border: solid 1px white;
-            border-radius: 60px;
-            font-size: 1px;
-            font-family: 'arial black';
-            color:white;
-            &:hover{
-                background-color: white;
-                color: #0c3b2c;
-            }
-        }
-    }
 
      // サラダに求めるのは
         &__imge{
@@ -469,36 +504,46 @@
         & img{
             width: auto;
             height: 100%;
-            transition: .3s;
-            transform: scale(1.1);
-            &:hover{
-                transform: scale(1.0)
-            }
         }
 
         &Group{
-            width: 80%;
             position: absolute;
-            top: 70%;
+            top: 68%;
             left: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
-        }
-        &Ttl{
-            font-size: 50px;
-            color: white;
-            font-family:'arial black';
-            margin-bottom: 40px;
-        }
-        &Txt{
-            margin-bottom: 40px;
-            color: white;
-            font-size: 20px;
-            line-height: 2;
-            letter-spacing: .07rem;
-        }
+            & h5{
+                font-size: 50px;
+                color: white;
+                font-family:'arial black';
+                margin-bottom: 40px;
+                }
+            & p{
+                width: 350px;
+                margin-bottom: 40px;
+                color: white;
+                font-size: 12px;
+                line-height: 2;
+                letter-spacing: .07rem;
+            }
+            & div{
+                p {
+                    width: 60%;
+                    padding: 20px 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-weight: bold;
+                    border: solid 1px white;
+                    border-radius: 60px;
+
+                    font-size: 1px;
+                    font-family: 'arial black';
+                    color:white;
+                }
+            }
         }
     }
+}
 
 
 
@@ -566,14 +611,15 @@
         margin-right: auto;
         flex-wrap: wrap;
         justify-content: space-around;
-        &__middle{
+        & li{
             width: 40%;
-            &Ttl {
+            padding-top: 20%;
+            & h2 {
             font-size: 34px;
             font-family: "arial black";
             color: #0c3b2c;
         }
-        &Txt{
+        & p{
             width: 260px;
             margin: 1rem 0px 1rem 0px;
             color: #0c3b2c;
@@ -581,7 +627,7 @@
             line-height: 2;
             letter-spacing: 0.07rem;
         }
-        &Yen{
+        & div{
             font-size: 15px;
             font-family:'arial black';
             color: #0c3b2c;
@@ -618,7 +664,7 @@
         margin-bottom: 7px;
         border-bottom: 2px solid #d6dde3;
     }
-    
+
     .accordion-003 summary {
         display: flex;
         justify-content: space-between;
@@ -629,11 +675,11 @@
         font-weight: 600;
         cursor: pointer;
     }
-    
+
     .accordion-003 summary::-webkit-details-marker {
         display: none;
     }
-    
+
     .accordion-003 summary::before,
     .accordion-003 summary::after {
         width: 3px;
@@ -642,21 +688,21 @@
         background-color: #333333b3;
         content: '';
     }
-    
+
     .accordion-003 summary::before {
         position: absolute;
         right: 2em;
         rotate: 90deg;
     }
-    
+
     .accordion-003 summary::after {
         transition: rotate .3s;
     }
-    
+
     .accordion-003[open] summary::after {
         rotate: 90deg;
     }
-    
+
     .accordion-003 p {
         transform: translateY(-10px);
         opacity: 0;
@@ -665,7 +711,7 @@
         color: #333333;
         transition: transform .5s, opacity .5s;
     }
-    
+
     .accordion-003[open] p {
         transform: none;
         opacity: 1;

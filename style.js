@@ -1,5 +1,5 @@
 
-  $(".l-main__list").slick({
+  $(".l-main__top ul").slick({
     autoplay: true, // 自動再生
     autoplaySpeed: 4000, // 再生速度（ミリ秒設定） 1000ミリ秒=1秒
     infinite: true, // 無限スライド
@@ -19,21 +19,25 @@
   });
 
 
-  $(".slider__bottom").slick({
-    arrows: false,
-    autoplay: true,
-    pause: 5000,
-    slidesToShow: 4,
-    speed: 600,
-    // responsive: [
-    //   {
-    //     breakpoint: 768, // 768px以下のサイズに適用
-    //     settings: {
-    //       unslick
-    //     },
-    //   },
-    // ],
+  $(function () {
+    $(".slider__bottom").slick({
+      arrows: false,
+      autoplay: true,
+      pause: 5000,
+      slidesToShow: 4,
+      speed: 600,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick",
+        },
+      ],
+    });
   });
+  $(window).on("resize orientationchange", function () {
+    $(".slider__bottom").slick("resize");
+  });
+
 
   // レスポンシブハンバーガーメニュー
   $(".openbtn1").click(function () {//ボタンがクリックされたら

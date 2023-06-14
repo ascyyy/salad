@@ -278,6 +278,8 @@
             }
         }
     }
+
+
 }
 
 
@@ -303,11 +305,11 @@
         font-weight: 600;
         cursor: pointer;
     }
-    
+
     .accordion-003 summary::-webkit-details-marker {
         display: none;
     }
-    
+
     .accordion-003 summary::before,
     .accordion-003 summary::after {
         width: 1px;
@@ -316,21 +318,21 @@
         background-color: #ffffff;
         content: '';
     }
-    
+
     .accordion-003 summary::before {
         position: absolute;
         right: 0em;
         rotate: 90deg;
     }
-    
+
     .accordion-003 summary::after {
         transition: rotate .3s;
     }
-    
+
     .accordion-003[open] summary::after {
         rotate: 90deg;
     }
-    
+
     .accordion-003 p {
         font-size: 24px;
         transform: translateY(-10px);
@@ -345,7 +347,7 @@
     .accordion-003 p:hover{
         color: white;
     }
-    
+
     .accordion-003[open] p {
         transform: none;
         opacity: 1;

@@ -29,31 +29,33 @@
         }
         &Group{
             display: flex;
-            width: 97%;
-            margin: auto;
             & div{
                 display: flex;
             }
         }
     }
-    &__logo{
-        width: 50px;
-        height: 50px;
-        margin: 9px;
-    }
+
     &__list{
-        position: relative;
-        display: flex;
-        color: #0c3b2c;
-    }
-    &__listTXT{
-        font-family: 'arial black';
-        font-size: 10px;
-        padding: 28px 8px ;
-        &:hover{
-            color: rgb(202, 159, 79);
+        & img{
+            width: 50px;
+            height: 50px;
+            margin: 9px;
         }
-    }
+        & ul{
+            position: relative;
+            display: flex;
+            color: #0c3b2c;
+        }
+        & li{
+            font-family: 'arial black';
+            font-size: 10px;
+            padding: 28px 8px ;
+            &:hover{
+                color: rgb(202, 159, 79);
+            }
+        }
+        }
+
     &__groupBox{
         padding: 16px;
         margin: 11px 0;
@@ -115,14 +117,17 @@
                 display: none;
             }
         }
-        &__logo{
-            width: 80px;
-            height: 80px;
-            padding: 16px;
-            margin-left: 43%;
-        }
+
         &__list{
-            display: none;
+            & img{
+                width: 80px;
+                height: 80px;
+                padding: 16px;
+                margin-left: 43%;
+            }
+            & ul{
+                display: none;
+            }
         }
     }
 

@@ -30,28 +30,26 @@
   }
   .l-header__topGroup {
     display: flex;
-    width: 97%;
-    margin: auto;
   }
   .l-header__topGroup div {
     display: flex;
   }
-  .l-header__logo {
+  .l-header__list img {
     width: 50px;
     height: 50px;
     margin: 9px;
   }
-  .l-header__list {
+  .l-header__list ul {
     position: relative;
     display: flex;
     color: #0c3b2c;
   }
-  .l-header__listTXT {
+  .l-header__list li {
     font-family: "arial black";
     font-size: 10px;
     padding: 28px 8px;
   }
-  .l-header__listTXT:hover {
+  .l-header__list li:hover {
     color: rgb(202, 159, 79);
   }
   .l-header__groupBox {
@@ -108,13 +106,13 @@
   .l-header__topBox {
     display: none;
   }
-  .l-header__logo {
+  .l-header__list img {
     width: 80px;
     height: 80px;
     padding: 16px;
     margin-left: 43%;
   }
-  .l-header__list {
+  .l-header__list ul {
     display: none;
   }
   #g-nav {
