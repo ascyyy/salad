@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* PC style */
 @media screen and (min-width: 769px) {
   .l-main {
@@ -6,7 +7,7 @@
     margin-right: auto;
   }
   .l-main__top {
-    padding-top: 70px;
+    padding-top: 170px;
     background-color: #0c3b2c;
   }
   .l-main__top ul {
@@ -14,27 +15,28 @@
     height: 49px;
     background: #0c3b2c;
     text-align: center;
-    padding: 1rem;
+    padding-bottom: 70px;
   }
   .l-main__top ul li {
-    font-size: 12px;
+    font-size: 24px;
     color: white;
     text-align: center;
   }
   .l-main__txt {
     display: flex;
     margin-top: 50px;
-    align-items: center;
   }
-  .l-main__txtTtl {
-    font-size: 15px;
+  .l-main__txt h1 {
+    font-size: 40px;
     color: #0c3b2c;
     font-family: "arial black";
+    margin: auto;
   }
-  .l-main__txtTxt {
-    font-size: 10px;
+  .l-main__txt p {
+    font-size: 30px;
     color: #0c3b2c;
     font-family: "arial black";
+    margin: auto;
   }
   .l-main__bottom {
     margin-top: 10%;
@@ -51,7 +53,7 @@
   }
   .l-main__bottomImg {
     overflow: hidden;
-    height: 700px;
+    height: 1300px;
   }
   .l-main__bottomImg img {
     width: 100%;
@@ -194,18 +196,78 @@
     color: #0c3b2c;
   }
 }
-.slider__top {
-  position: relative;
+/*** スライドショー ***/
+.slide-show {
+  position: relative; /*子要素の起点*/
+  margin: 0 auto; /*中央配置*/
+  width: 100%; /*任意の幅*/
+  height: 1700px;
+  overflow: hidden; /*外側要素の非表示*/
 }
-.slider__top img {
-  width: 100%;
-  height: 800px;
+.slide-show img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+/*** スライド(画像) ***/
+.slide-show > img {
+  position: absolute;
+  top: 0;
+  left: 100%; /*右側へ隠す*/
+  width: 100%;
+  height: 100%;
+  animation: slide 20s linear forwards infinite; /*スライドアニメーション（ループ）*/
+}
+
+/*1枚目*/
+.slide-show > img:nth-of-type(1) {
+  animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
+}
+
+/*** 2枚目移行は 1/4時間ずつ遅らせる ***/
+.slide-show > img:nth-of-type(2) {
+  animation-delay: 5s; /* 1/4の遅延 */
+}
+
+.slide-show > img:nth-of-type(3) {
+  animation-delay: 10s; /* 2/4の遅延 */
+}
+
+.slide-show > img:nth-of-type(4) {
+  animation-delay: 15s; /* 3/4の遅延 */
+}
+
+/*** スライドアニメーション ***/
+@keyframes slide {
+  0% {
+    left: 100%; /*右*/
+  }
+  3%, 25% { /*画像が4枚なので 1/4 まで*/
+    left: 0; /*表示*/
+  }
+  28%, 100% {
+    left: -100%; /*左*/
+  }
+}
+/*** 画面表示時の1枚目のアニメーション(1回のみ) ***/
+@keyframes slide-start {
+  0%, 25% {
+    left: 0; /*表示*/
+  }
+  28%, 100% {
+    left: -100%; /*左へ隠す*/
+  }
+}
+/*** サンプル用装飾 ***/
+body {
+  zoom: 0.5; /*プレビューが小さいので縮小*/
+  padding: 1rem;
+}
+
 .slider__middle {
-  margin-top: 5%;
-  margin-bottom: 15%;
+  position: absolute;
+  top: -800px;
+  margin: 0px 0px 5% 5%;
 }
 .slider__middle li {
   width: 86%;
@@ -213,27 +275,34 @@
 }
 .slider__middle h1 {
   width: 54%;
-  font-size: 84px;
+  font-size: 150px;
   font-family: "arial black";
-  color: #0c3b2c;
+  color: white;
   line-height: 1.2;
 }
 .slider__middle p {
   margin: 1rem 0px 1rem 0px;
-  color: #0c3b2c;
-  font-size: 12px;
+  color: white;
+  font-size: 30px;
   line-height: 2;
   letter-spacing: 0.07rem;
 }
-.slider .slick-dots {
-  bottom: 30px !important;
+.slider__contents p {
+  width: 20rem;
+  margin-top: 4%;
+  background-color: white;
+  border-radius: 8rem;
+  text-align: center;
+  color: #0c3b2c;
+  font-size: 30px;
 }
 .slider__bottom {
   width: 100%;
+  margin-bottom: 10%;
 }
 .slider__bottom img {
   width: 100%;
-  height: 350px;
+  height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 10px;
@@ -258,8 +327,8 @@
   margin-bottom: 10%;
 }
 .p-main__middle Img {
-  width: 220px;
-  height: 220px;
+  width: 500px;
+  height: 500px;
   display: block;
   margin-left: auto;
   margin-bottom: 40px;
@@ -270,7 +339,7 @@
   transition-duration: 0.5s;
 }
 .p-main__middle h2 {
-  font-size: 15px;
+  font-size: 30px;
   font-family: "arial black";
   color: #0c3b2c;
 }
@@ -278,24 +347,23 @@
   width: 90%;
   margin: 1rem 0px 1rem 0px;
   color: #0c3b2c;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 2;
   letter-spacing: 0.07rem;
 }
 .p-main__middle div {
-  font-size: 15px;
+  font-size: 30px;
   font-family: "arial black";
   color: #0c3b2c;
 }
 .p-main__contents p {
-  width: 11rem;
+  width: 20rem;
   margin-top: 7%;
   background-color: #3f665c;
-  border-radius: 4rem;
+  border-radius: 8rem;
   text-align: center;
   color: white;
-  font-size: 20px;
-  font-family: "arial black";
+  font-size: 40px;
 }
 
 /* SP style */

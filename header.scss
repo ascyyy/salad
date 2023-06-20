@@ -14,47 +14,43 @@
         &Box{
             margin-left: auto;
             & p{
-                margin: 8% 0px;
+                margin: 14% 0px;
                 font-weight: bold;
                 border-radius: 60px;
                 align-items: center;
-                width: 8rem;
+                width: 13rem;
                 color: white;
-                padding: 1.1rem;
+                padding: 1.3rem;
                 background-color: #3f665c;
                 border-radius: 3rem;
                 text-align: center;
-                font-size: 12px;
+                font-size: 18px;
             }
         }
         &Group{
             display: flex;
-            & div{
+            width: 97%;
+            margin: auto;
+            & img{
+                width: 100px;
+                height: 100px;
+                margin: 9px;
+            }
+            & ul{
+                position: relative;
                 display: flex;
+                color: #0c3b2c;
+            }
+            & li{
+                font-family: "arial black";
+                font-size: 30px;
+                padding: 40px 30px;
+                &:hover{
+                    color: rgb(202, 159, 79);
+                }
             }
         }
     }
-
-    &__list{
-        & img{
-            width: 50px;
-            height: 50px;
-            margin: 9px;
-        }
-        & ul{
-            position: relative;
-            display: flex;
-            color: #0c3b2c;
-        }
-        & li{
-            font-family: 'arial black';
-            font-size: 10px;
-            padding: 28px 8px ;
-            &:hover{
-                color: rgb(202, 159, 79);
-            }
-        }
-        }
 
     &__groupBox{
         padding: 16px;
@@ -72,21 +68,23 @@
             color: #f9f8f3;
             }
         }
+}
+
+        .l-nav__list{
+            display: none;
+        }
+        .nav{
+            display: none;
+        }
+        .accordion{
+            display: none;
+        }
+        .l-header__groupMiddle{
+            display: none;
+        }
 
 }
-.l-nav__list{
-    display: none;
-}
-.nav{
-    display: none;
-}
-.accordion{
-    display: none;
-}
-.l-header__groupMiddle{
-    display: none;
-}
-}
+
 
 
 
