@@ -2,6 +2,7 @@
 /* PC style */
 @media screen and (min-width: 769px) {
   .l-footer {
+    margin-top: 5%;
     position: relative;
     margin-top: 5%;
     background-color: #eae8e3;
@@ -19,7 +20,7 @@
     margin-top: 5%;
     background-color: #eae8e3;
     width: 100%;
-    height: 500px;
+    height: 1000px;
     margin: auto;
   }
   .l-footer__top {
@@ -43,7 +44,7 @@
   .l-footer__middle {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 2000px;
     background-color: #0c3b2c;
   }
   .l-footer__middleTop {
@@ -59,14 +60,14 @@
   }
   .l-footer__middle h6 {
     color: white;
-    font-size: 19px;
+    font-size: 40px;
     font-family: "arial black";
   }
   .l-footer__middle p {
     width: 87%;
     padding-top: 40px;
     color: white;
-    font-size: 12px;
+    font-size: 24px;
     line-height: 2;
     letter-spacing: 0.07rem;
   }
@@ -82,19 +83,20 @@
     margin-top: 15%;
   }
   .l-footer__middleGroup {
-    width: 55%;
+    width: 80%;
     display: flex;
-    margin: auto;
+    margin-left: auto;
     padding-top: 10%;
   }
   .l-footer__middleGroup ul {
     color: white;
     font-family: "arial black";
+    font-size: 30px;
   }
   .l-footer__middleGroup li {
     padding-top: 20px;
     color: rgb(134, 164, 140);
-    font-size: 12px;
+    font-size: 24px;
     line-height: 2;
     transition: all 1s ease;
   }
@@ -102,7 +104,7 @@
     color: rgb(255, 255, 255);
   }
   .l-footer__middleList {
-    width: 200px;
+    width: 420px;
     padding-right: 5px;
   }
   .l-footer__middleIcon {
@@ -111,8 +113,8 @@
   }
   .l-footer__middleIcon img {
     margin-right: 5px;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     color: white;
   }
   .l-footer__middleIcon2 {
@@ -128,7 +130,7 @@
   }
   .l-footer__bottom div {
     text-align: center;
-    font-size: 8.5rem;
+    font-size: 18rem;
   }
   .l-footer__bottomBox {
     display: none;

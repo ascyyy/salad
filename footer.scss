@@ -1,6 +1,7 @@
  /* PC style */
 @media screen and (min-width: 769px) {
 .l-footer{
+    margin-top: 5%;
     position: relative;
     margin-top: 5%;
     background-color: #eae8e3;
@@ -17,7 +18,7 @@
         margin-top: 5%;
         background-color: #eae8e3;
         width: 100%;
-        height: 500px;
+        height: 1000px;
         margin: auto;
     }
 
@@ -44,7 +45,7 @@
     &__middle{
         position: relative;
         width: 100%;
-        height: 1000px;
+        height: 2000px;
         background-color: #0c3b2c;;
 
         &Top{
@@ -60,14 +61,14 @@
         }
         & h6{
             color: white;
-            font-size: 19px;
+            font-size: 40px;
             font-family: 'arial black';
         }
         & p{
             width: 87%;
             padding-top: 40px;
             color: white;
-            font-size: 12px;
+            font-size: 24px;
             line-height: 2;
             letter-spacing: 0.07rem;
         }
@@ -86,18 +87,19 @@
 
 
         &Group{
-            width: 55%;
+            width: 80%;
             display: flex;
-            margin: auto;
+            margin-left: auto;
             padding-top: 10%;
             & ul{
                 color: white;
                 font-family:'arial black';
+                font-size: 30px;
             }
             & li{
             padding-top: 20px;
             color: rgb(134, 164, 140);
-            font-size: 12px;
+            font-size: 24px;
             line-height: 2;
             // letter-spacing: .07rem;
             transition: all 1s ease;
@@ -107,7 +109,7 @@
                 }
         }
         &List{
-            width: 200px;
+            width: 420px;
             padding-right: 5px;
         }
         &Icon{
@@ -115,8 +117,8 @@
             padding-right: 10px;
             & img{
                 margin-right: 5px;
-                width: 15px;
-                height: 15px;
+                width: 30px;
+                height: 30px;
                 color: white;
             }
             &2{
@@ -135,7 +137,7 @@
         white-space: nowrap;
         & div{
             text-align: center;
-            font-size: 8.5rem;
+            font-size: 18rem;
         }
         &Box{
             display: none;
