@@ -196,177 +196,168 @@
     background-color: white;
     color: #0c3b2c;
   }
-}
-/*** スライドショー ***/
-.slide-show {
-  position: relative; /*子要素の起点*/
-  margin: 0 auto; /*中央配置*/
-  width: 100%; /*任意の幅*/
-  height: 1700px;
-  overflow: hidden; /*外側要素の非表示*/
-}
-.slide-show img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/*** スライド(画像) ***/
-.slide-show > img {
-  position: absolute;
-  top: 0;
-  left: 100%; /*右側へ隠す*/
-  width: 100%;
-  height: 100%;
-  animation: slide 20s linear forwards infinite; /*スライドアニメーション（ループ）*/
-}
-
-/*1枚目*/
-.slide-show > img:nth-of-type(1) {
-  animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
-}
-
-/*** 2枚目移行は 1/4時間ずつ遅らせる ***/
-.slide-show > img:nth-of-type(2) {
-  animation-delay: 5s; /* 1/4の遅延 */
-}
-
-.slide-show > img:nth-of-type(3) {
-  animation-delay: 10s; /* 2/4の遅延 */
-}
-
-.slide-show > img:nth-of-type(4) {
-  animation-delay: 15s; /* 3/4の遅延 */
-}
-
-/*** スライドアニメーション ***/
-@keyframes slide {
-  0% {
-    left: 100%; /*右*/
+  /*** スライドショー ***/
+  .slide-show {
+    position: relative; /*子要素の起点*/
+    margin: 0 auto; /*中央配置*/
+    width: 100%; /*任意の幅*/
+    height: 1700px;
+    overflow: hidden; /*外側要素の非表示*/
   }
-  3%, 25% { /*画像が4枚なので 1/4 まで*/
-    left: 0; /*表示*/
+  .slide-show img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  28%, 100% {
-    left: -100%; /*左*/
+  /*** スライド(画像) ***/
+  .slide-show > img {
+    position: absolute;
+    top: 0;
+    left: 100%; /*右側へ隠す*/
+    width: 100%;
+    height: 100%;
+    animation: slide 20s linear forwards infinite; /*スライドアニメーション（ループ）*/
+  }
+  /*1枚目*/
+  .slide-show > img:nth-of-type(1) {
+    animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
+  }
+  /*** 2枚目移行は 1/4時間ずつ遅らせる ***/
+  .slide-show > img:nth-of-type(2) {
+    animation-delay: 5s; /* 1/4の遅延 */
+  }
+  .slide-show > img:nth-of-type(3) {
+    animation-delay: 10s; /* 2/4の遅延 */
+  }
+  .slide-show > img:nth-of-type(4) {
+    animation-delay: 15s; /* 3/4の遅延 */
+  }
+  /*** スライドアニメーション ***/
+  @keyframes slide {
+    0% {
+      left: 100%; /*右*/
+    }
+    3%, 25% { /*画像が4枚なので 1/4 まで*/
+      left: 0; /*表示*/
+    }
+    28%, 100% {
+      left: -100%; /*左*/
+    }
+  }
+  /*** 画面表示時の1枚目のアニメーション(1回のみ) ***/
+  @keyframes slide-start {
+    0%, 25% {
+      left: 0; /*表示*/
+    }
+    28%, 100% {
+      left: -100%; /*左へ隠す*/
+    }
+  }
+  /*** サンプル用装飾 ***/
+  body {
+    zoom: 0.5; /*プレビューが小さいので縮小*/
+  }
+  .slider__middle {
+    position: absolute;
+    top: -800px;
+    margin: 0px 0px 5% 5%;
+  }
+  .slider__middle li {
+    width: 86%;
+    margin: auto;
+  }
+  .slider__middle h1 {
+    width: 54%;
+    font-size: 150px;
+    font-family: "arial black";
+    color: white;
+    line-height: 1.2;
+  }
+  .slider__middle p {
+    margin: 1rem 0px 1rem 0px;
+    color: white;
+    font-size: 25px;
+    line-height: 2;
+    letter-spacing: 0.07rem;
+  }
+  .slider__contents p {
+    width: 20rem;
+    padding: 20px;
+    margin-top: 4%;
+    background-color: white;
+    border-radius: 8rem;
+    text-align: center;
+    color: #0c3b2c;
+    font-size: 30px;
+  }
+  .slider__bottom {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .slider__bottom img {
+    width: 100%;
+    height: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .p-main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 10%;
+  }
+  .p-main__middle {
+    margin-top: 10%;
+    list-style: none;
+    width: 22%;
+  }
+  .p-main__middleBox {
+    width: 24%;
+    margin-bottom: 10%;
+  }
+  .p-main__middle Img {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 40px;
+    transition-duration: 0.5s;
+  }
+  .p-main__middle Img:hover {
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+  }
+  .p-main__middle h2 {
+    font-size: 30px;
+    font-family: "arial black";
+    color: #0c3b2c;
+  }
+  .p-main__middle p {
+    width: 90%;
+    margin: 1rem 0px 1rem 0px;
+    color: #0c3b2c;
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: 0.07rem;
+  }
+  .p-main__middle div {
+    font-size: 30px;
+    font-family: "arial black";
+    color: #0c3b2c;
+  }
+  .p-main__contents p {
+    width: 20rem;
+    margin-top: 7%;
+    background-color: #3f665c;
+    border-radius: 8rem;
+    text-align: center;
+    color: white;
+    font-size: 40px;
   }
 }
-/*** 画面表示時の1枚目のアニメーション(1回のみ) ***/
-@keyframes slide-start {
-  0%, 25% {
-    left: 0; /*表示*/
-  }
-  28%, 100% {
-    left: -100%; /*左へ隠す*/
-  }
-}
-/*** サンプル用装飾 ***/
-body {
-  zoom: 0.5; /*プレビューが小さいので縮小*/
-}
-
-.slider__middle {
-  position: absolute;
-  top: -800px;
-  margin: 0px 0px 5% 5%;
-}
-.slider__middle li {
-  width: 86%;
-  margin: auto;
-}
-.slider__middle h1 {
-  width: 54%;
-  font-size: 150px;
-  font-family: "arial black";
-  color: white;
-  line-height: 1.2;
-}
-.slider__middle p {
-  margin: 1rem 0px 1rem 0px;
-  color: white;
-  font-size: 25px;
-  line-height: 2;
-  letter-spacing: 0.07rem;
-}
-.slider__contents p {
-  width: 20rem;
-  padding: 20px;
-  margin-top: 4%;
-  background-color: white;
-  border-radius: 8rem;
-  text-align: center;
-  color: #0c3b2c;
-  font-size: 30px;
-}
-.slider__bottom {
-  width: 100%;
-  margin-bottom: 10%;
-}
-.slider__bottom img {
-  width: 100%;
-  height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.p-main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  justify-content: space-between;
-  padding-bottom: 10%;
-}
-.p-main__middle {
-  margin-top: 10%;
-  list-style: none;
-  width: 22%;
-}
-.p-main__middleBox {
-  width: 24%;
-  margin-bottom: 10%;
-}
-.p-main__middle Img {
-  width: 500px;
-  height: 500px;
-  display: block;
-  margin-left: auto;
-  margin-bottom: 40px;
-  transition-duration: 0.5s;
-}
-.p-main__middle Img:hover {
-  transform: scale(0.9);
-  transition-duration: 0.5s;
-}
-.p-main__middle h2 {
-  font-size: 30px;
-  font-family: "arial black";
-  color: #0c3b2c;
-}
-.p-main__middle p {
-  width: 90%;
-  margin: 1rem 0px 1rem 0px;
-  color: #0c3b2c;
-  font-size: 24px;
-  line-height: 2;
-  letter-spacing: 0.07rem;
-}
-.p-main__middle div {
-  font-size: 30px;
-  font-family: "arial black";
-  color: #0c3b2c;
-}
-.p-main__contents p {
-  width: 20rem;
-  margin-top: 7%;
-  background-color: #3f665c;
-  border-radius: 8rem;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-}
-
 /* SP style */
 @media screen and (max-width: 768px) {
   .l-wrap {
@@ -540,14 +531,83 @@ body {
     font-family: "arial black";
     color: white;
   }
-  .slider__top {
-    width: 100%;
+  /*** スライドショー ***/
+  .slide-show {
+    position: relative; /*子要素の起点*/
+    margin: 0 auto; /*中央配置*/
+    width: 100%; /*任意の幅*/
+    height: 500px;
+    overflow: hidden; /*外側要素の非表示*/
   }
-  .slider__top img {
-    width: 100%;
-    height: 510px;
+  .slide-show img {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  /*** スライド(画像) ***/
+  .slide-show > img {
+    position: absolute;
+    top: 0;
+    left: 100%; /*右側へ隠す*/
+    width: 100%;
+    height: 100%;
+    animation: slide 20s linear forwards infinite; /*スライドアニメーション（ループ）*/
+  }
+  /*1枚目*/
+  .slide-show > img:nth-of-type(1) {
+    animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
+  }
+  /*** 2枚目移行は 1/4時間ずつ遅らせる ***/
+  .slide-show > img:nth-of-type(2) {
+    animation-delay: 5s; /* 1/4の遅延 */
+  }
+  .slide-show > img:nth-of-type(3) {
+    animation-delay: 10s; /* 2/4の遅延 */
+  }
+  .slide-show > img:nth-of-type(4) {
+    animation-delay: 15s; /* 3/4の遅延 */
+  }
+  /*** スライドアニメーション ***/
+  @keyframes slide {
+    0% {
+      left: 100%; /*右*/
+    }
+    3%, 25% { /*画像が4枚なので 1/4 まで*/
+      left: 0; /*表示*/
+    }
+    28%, 100% {
+      left: -100%; /*左*/
+    }
+  }
+  /*** 画面表示時の1枚目のアニメーション(1回のみ) ***/
+  @keyframes slide-start {
+    0%, 25% {
+      left: 0; /*表示*/
+    }
+    28%, 100% {
+      left: -100%; /*左へ隠す*/
+    }
+  }
+  /*** サンプル用装飾 ***/
+  body {
+    zoom: 0.5; /*プレビューが小さいので縮小*/
+  }
+  .slider__middle li {
+    width: 86%;
+    margin: auto;
+  }
+  .slider__middle h1 {
+    width: 75%;
+    font-size: 70px;
+    font-family: "arial black";
+    color: #0c3b2c;
+    line-height: 1.2;
+  }
+  .slider__middle p {
+    margin: 1rem 0px 1rem 0px;
+    color: #0c3b2c;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.07rem;
   }
   .slider__contents {
     width: 90%;
@@ -568,28 +628,6 @@ body {
   }
   .slider__bottom img:nth-child(even) {
     padding-left: 20px;
-  }
-  .slider__middle {
-    margin-top: 5%;
-    margin-bottom: 15%;
-  }
-  .slider__middle li {
-    width: 86%;
-    margin: auto;
-  }
-  .slider__middle h1 {
-    width: 75%;
-    font-size: 70px;
-    font-family: "arial black";
-    color: #0c3b2c;
-    line-height: 1.2;
-  }
-  .slider__middle p {
-    margin: 1rem 0px 1rem 0px;
-    color: #0c3b2c;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.07rem;
   }
   .slick-dots {
     bottom: 30px !important;

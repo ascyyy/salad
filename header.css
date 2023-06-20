@@ -105,16 +105,16 @@
     width: 90%;
     margin: auto;
   }
-  .l-header__topBox {
-    display: none;
-  }
-  .l-header__list img {
+  .l-header__topGroup img {
     width: 80px;
     height: 80px;
     padding: 16px;
     margin-left: 43%;
   }
-  .l-header__list ul {
+  .l-header__topGroup ul {
+    display: none;
+  }
+  .l-header__topBox {
     display: none;
   }
   #g-nav {

@@ -225,7 +225,7 @@
     }
 }
 
-}
+
 
 
 
@@ -407,6 +407,8 @@
             }
         }
     }
+
+// }
 
 
 
@@ -611,13 +613,90 @@
 
 
 
+/*** スライドショー ***/
+.slide-show{
+    position: relative; /*子要素の起点*/
+    margin: 0 auto; /*中央配置*/
+    width: 100%; /*任意の幅*/
+    height: 500px;
+    overflow: hidden; /*外側要素の非表示*/
+    & img{
+        object-fit: cover;
+    }
+}
+
+/*** スライド(画像) ***/
+.slide-show > img{
+    position: absolute;
+    top: 0;
+    left: 100%; /*右側へ隠す*/
+    width: 100%;
+    height: 100%;
+    animation: slide 20s linear forwards infinite; /*スライドアニメーション（ループ）*/
+}
+/*1枚目*/
+.slide-show > img:nth-of-type(1){
+    animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
+}
+
+/*** 2枚目移行は 1/4時間ずつ遅らせる ***/
+.slide-show > img:nth-of-type(2) {
+    animation-delay: 5s; /* 1/4の遅延 */
+}
+.slide-show > img:nth-of-type(3) {
+    animation-delay: 10s; /* 2/4の遅延 */
+}
+.slide-show > img:nth-of-type(4){
+    animation-delay: 15s; /* 3/4の遅延 */
+}
+/*** スライドアニメーション ***/
+@keyframes slide{
+    0% {
+    left: 100%; /*右*/
+    }
+    3%, 25%{ /*画像が4枚なので 1/4 まで*/
+    left: 0; /*表示*/
+    }
+    28%,100%{
+    left: -100%; /*左*/
+    }
+}
+
+
+/*** 画面表示時の1枚目のアニメーション(1回のみ) ***/
+@keyframes slide-start{
+    0%,25%{
+    left: 0; /*表示*/
+    }
+    28%,100%{
+    left: -100%; /*左へ隠す*/
+    }
+}
+/*** サンプル用装飾 ***/
+body{
+    zoom: 0.5; /*プレビューが小さいので縮小*/
+}
+
+
     .slider{
-        &__top{
-            width: 100%;
-            & img{
-                width: 100%;
-                height: 510px;
-                object-fit: cover;
+        &__middle{
+            & li{
+            width: 86%;
+            margin: auto;
+            }
+            & h1{
+                width: 75%;
+                font-size: 70px;
+                font-family:'arial black';
+                color: #0c3b2c;
+                line-height: 1.2;
+            }
+            & p{
+                margin: 1rem 0px 1rem 0px;
+                color: #0c3b2c;
+                font-size: 12px;
+                line-height: 2;
+                letter-spacing: .07rem;
             }
         }
         &__contents{
@@ -628,39 +707,18 @@
             justify-content: space-around;
         }
         &__bottom{
-            width: 100%;
+        width: 100%;
             & img{
             width: 335px;
             height: 335px;
             object-fit: cover;
             padding-bottom: 20px;
-            &:nth-child(even){
-                padding-left: 20px;
+                &:nth-child(even){
+                    padding-left: 20px;
+                }
             }
         }
-        }
-        &__middle{
-            margin-top: 5%;
-            margin-bottom: 15%;
-            & li{
-            width: 86%;
-            margin: auto;
-        }
-        & h1{
-            width: 75%;
-            font-size: 70px;
-            font-family:'arial black';
-            color: #0c3b2c;
-            line-height: 1.2;
-        }
-        & p{
-            margin: 1rem 0px 1rem 0px;
-            color: #0c3b2c;
-            font-size: 12px;
-            line-height: 2;
-            letter-spacing: .07rem;
-        }
-    }
+
     }
     .slick-dots{
         bottom: 30px!important;
