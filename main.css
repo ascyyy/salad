@@ -258,7 +258,7 @@
   }
   .slider__middle {
     position: absolute;
-    top: -800px;
+    top: 10px;
     margin: 0px 0px 5% 5%;
   }
   .slider__middle li {
@@ -609,12 +609,15 @@
     line-height: 2;
     letter-spacing: 0.07rem;
   }
-  .slider__contents {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .slider__contents p {
+    width: 11rem;
+    padding: 1rem;
+    background-color: #3f665c;
+    border-radius: 3rem;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "arial black";
   }
   .slider__bottom {
     width: 100%;
