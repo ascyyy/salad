@@ -18,7 +18,7 @@
                     color: white;
                     text-align: center;
                 }
-                }
+            }
         }
 
         &__txt{
@@ -47,10 +47,6 @@
             margin: 28px auto 0;
             color: #000;
             text-decoration: none;
-            &I{
-                height: 700px;
-                overflow: hidden;
-            }
             &Img{
                 overflow: hidden;
                 height: 1300px;
@@ -256,7 +252,7 @@
     .slide-show > img:nth-of-type(1){
         animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
     }
-    
+
     /*** 2枚目移行は 1/4時間ずつ遅らせる ***/
     .slide-show > img:nth-of-type(2) {
         animation-delay: 5s; /* 1/4の遅延 */
@@ -438,7 +434,7 @@
                     color: white;
                     text-align: center;
                 }
-                }
+            }
         }
 
         &__txt{
@@ -724,7 +720,6 @@ body{
                 }
             }
         }
-
     }
     .slick-dots{
         bottom: 30px!important;
