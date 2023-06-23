@@ -379,7 +379,7 @@
     padding: 1rem;
   }
   .l-main__top ul li {
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     text-align: center;
   }
@@ -556,7 +556,7 @@
   .slide-show > img:nth-of-type(1) {
     animation: slide 20s linear forwards infinite, slide-start 20s linear; /*2つのアニメーション*/
   }
-  /*** 2枚目移行は 1/4時間ずつ遅らせる ***/
+  /*** 2枚目以降は 1/4時間ずつ遅らせる ***/
   .slide-show > img:nth-of-type(2) {
     animation-delay: 5s; /* 1/4の遅延 */
   }
@@ -590,6 +590,9 @@
   /*** サンプル用装飾 ***/
   body {
     zoom: 0.5; /*プレビューが小さいので縮小*/
+  }
+  .slider__middle {
+    padding: 50px 0;
   }
   .slider__middle li {
     width: 86%;
