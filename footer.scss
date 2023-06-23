@@ -160,45 +160,45 @@
             margin-left: auto;
             margin-right: auto;
         }
-    &__top{
+        &__top{
         position: absolute;
         top: 15%;
-        &Img{
-            overflow: hidden;
-        }
-        & img{
-            width: 100%;
-            height: auto;
-            transition: .3s;
-            transform: scale(1.1);
-            &:hover{
-                transform: scale(1.0)
+            &Img{
+                overflow: hidden;
             }
-    }
-    }
-    &__contents {
-        background-color: #eae8e3;
-        width: 100%;
-        height: 550px;
-    }
-
-    &__middle{
-        position: relative;
-        width: 100%;
-        background-color: #0c3b2c;;
-
-        &Top{
-            padding-top: 20%;
-            padding-left: 10%;
-        }
-        &Img{
-            position: absolute;
-            top: 21%;
-            left: 59%;
             & img{
-                width: 40%;
+                width: 100%;
+                height: auto;
+                transition: .3s;
+                transform: scale(1.1);
+                &:hover{
+                    transform: scale(1.0)
+                }
             }
         }
+        &__contents {
+            background-color: #eae8e3;
+            width: 100%;
+            height: 550px;
+        }
+
+        &__middle{
+            position: relative;
+            width: 100%;
+            background-color: #0c3b2c;;
+
+            &Top{
+                padding-top: 20%;
+                padding-left: 10%;
+            }
+            &Img{
+                position: absolute;
+                top: 21%;
+                left: 59%;
+                & img{
+                    width: 40%;
+                }
+            }
 
         &Left{
             & h6{
@@ -286,11 +286,11 @@
 
 
     .accordion{
-        width: 67%;
+        width: 90%;
         margin: auto;
     }
     .accordion-003 {
-        max-width: 500px;
+        max-width: 670px;
         margin-bottom: 7px;
         border-bottom: 0.5px solid #d6dde3;
     }

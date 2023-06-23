@@ -260,12 +260,12 @@
   }
 }
 .accordion {
-  width: 67%;
+  width: 90%;
   margin: auto;
 }
 
 .accordion-003 {
-  max-width: 500px;
+  max-width: 670px;
   margin-bottom: 7px;
   border-bottom: 0.5px solid #d6dde3;
 }
